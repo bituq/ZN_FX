@@ -534,7 +534,7 @@ uniform int SHADER_VERSION <
 //============================================================================================
 //Textures/Samplers
 //=================================================================================
-namespace A26{
+namespace A26 {
 	texture BlueNoiseTex < source = "ZNbluenoise512.png"; >
 	{
 		Width  = 512.0;
@@ -570,7 +570,7 @@ namespace A26{
 	texture BufTex{
 		Width = int(BUFFER_WIDTH * ZNRY_RENDER_SCL / ZNRY_SAMPLE_DIV);
 		Height = int(BUFFER_HEIGHT * ZNRY_RENDER_SCL / ZNRY_SAMPLE_DIV);
-		Format = R16;
+		Format = R8;
 		MipLevels = ZNRY_MAX_LODS;
 	};
 	sampler DepSam{
@@ -622,7 +622,7 @@ namespace A26{
 	texture PreLuminTex {
 		Width = int(BUFFER_WIDTH * ZNRY_RENDER_SCL);
 		Height = int(BUFFER_HEIGHT * ZNRY_RENDER_SCL);
-		Format = R16;
+		Format = R8;
 		MipLevels = 2;
 	};
 	sampler PreLumin {Texture = PreLuminTex;};
@@ -642,6 +642,7 @@ namespace A26{
 	};
 	sampler DualFrm {Texture = DualTex;};	
 }
+
 
 
 
